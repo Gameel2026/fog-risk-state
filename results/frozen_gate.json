@@ -1,0 +1,7 @@
+{
+  "rule": "Otsu on pooled log 0.5-3 Hz power (primary windows, no labels) and step autocorrelation > 0.3",
+  "logP_loc_threshold": 1.6852150201449865,
+  "ac_threshold": 0.3,
+  "windows_total": 21842,
+  "windows_kept": 7720
+}
