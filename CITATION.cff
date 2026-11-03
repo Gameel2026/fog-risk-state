@@ -2,6 +2,7 @@ cff-version: 1.2.0
 message: "If you use this software or its results, please cite it as below."
 title: "fog-risk-state: levodopa OFF-state detection from freeze-free walking with a single lower-back accelerometer"
 type: software
+doi: "10.5281/zenodo.23931405"
 authors:
   - family-names: "Soliman"
     given-names: "Ahmed M."
