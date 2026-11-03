@@ -1,0 +1,42 @@
+recording 1 / 1176
+recording 51 / 1176
+recording 101 / 1176
+recording 151 / 1176
+recording 201 / 1176
+recording 301 / 1176
+recording 351 / 1176
+recording 401 / 1176
+recording 451 / 1176
+recording 501 / 1176
+recording 551 / 1176
+recording 601 / 1176
+recording 651 / 1176
+recording 701 / 1176
+recording 751 / 1176
+recording 801 / 1176
+recording 851 / 1176
+recording 901 / 1176
+recording 951 / 1176
+recording 1001 / 1176
+recording 1051 / 1176
+recording 1101 / 1176
+recording 1151 / 1176
+emulated core: cortex-m4
+defog    recordings  137 windows  11238 gate agreement 100.0000% NaN-pattern agreement 100.0000% max|logit diff| 1.4e-01
+         retained recordings identical: True (C 136, Python 136); max |recording score diff| 4.6e-07
+tdcsfog  recordings 1019 windows  10604 gate agreement 100.0000% NaN-pattern agreement 100.0000% max|logit diff| 1.3e-02
+         retained recordings identical: True (C 717, Python 717); max |recording score diff| 1.2e-06
+max abs feature error over all windows: logP_loc 1.2e-05, logP_frz 7.4e-06, log_ratio 1.4e-05, rms_V 1.1e-07, rms_ML 9.0e-08, rms_AP 1.3e-07, f_step 2.3e+00, step_peak_rel 8.5e-06, HR_V 7.5e-02, HR_AP 5.1e-01, HR_ML 6.8e-02, step_reg 3.6e-04, stride_reg 4.3e-04, symmetry 7.9e+00, log_jerk 2.3e-06
+per 6-s window (one window every 3 s):
+  executed instructions 1450712, 32-bit instruction fetches 1191751, data reads from flash 130282
+  lower bound (1 cycle per instruction): 22.67 ms at 64 MHz
+  approx. core cycles (Cortex-M4 TRM timings): 1787783
+  flash wait states 0, no cache (upper bound): 1787783 cycles = 27.93 ms, CPU duty 0.931%, estimated average CPU current 30.99 uA above 3.16 uA idle
+  flash wait states 1, no cache (upper bound): 3109817 cycles = 48.59 ms, CPU duty 1.620%, estimated average CPU current 53.90 uA above 3.16 uA idle
+  flash wait states 2, no cache (upper bound): 4431850 cycles = 69.25 ms, CPU duty 2.308%, estimated average CPU current 76.82 uA above 3.16 uA idle
+  .text                7168           0
+  .rodata              3976        7168
+  .bss                10752   536870912
+  stack fog_state.c:66:fog_window	184	static
+  stack fog_state.c:158:run	32	static
+saved mcu_results.txt, mcu_agreement.csv and mcu_recording_scores.csv

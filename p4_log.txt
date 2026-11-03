@@ -1,0 +1,2 @@
+max |coef - results.json| = 0.0
+wrote results/deploy_model.json and mcu/fog_params.h; trained on 7355 windows
