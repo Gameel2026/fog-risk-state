@@ -1,0 +1,16 @@
+{
+  "title": "fog-risk-state: levodopa OFF-state detection from freeze-free walking with a single lower-back accelerometer",
+  "upload_type": "software",
+  "description": "Analysis plan, code, results and embedded Cortex-M4F implementation of a study on detecting the levodopa OFF state from freeze-free walking in people with freezing of gait, using a single lower-back accelerometer. The plan, the frozen gait gate and the analysis code were committed before any medication-state result was computed. Post hoc analyses are documented in a dated amendment. Raw data are not redistributed.",
+  "creators": [
+    {"name": "Soliman, Ahmed M.", "affiliation": "Biomedical Engineering Department, Capital University (Formerly Helwan University), Cairo, Egypt"},
+    {"name": "Gamil, Doaa Y. Nashaat", "affiliation": "Biomedical Engineering Department, Capital University (Formerly Helwan University), Cairo, Egypt"},
+    {"name": "Hammad, Muhammed S.", "affiliation": "Biomedical Engineering Department, Capital University (Formerly Helwan University), Cairo, Egypt"},
+    {"name": "Hassan, Mohammed A.", "affiliation": "Biomedical Engineering Department, Capital University (Formerly Helwan University), Cairo, Egypt"}
+  ],
+  "license": "MIT",
+  "keywords": ["freezing of gait", "Parkinson's disease", "levodopa", "wearable sensors", "embedded systems", "pre-registration"],
+  "related_identifiers": [
+    {"identifier": "10.5281/zenodo.12565292", "relation": "isDerivedFrom", "scheme": "doi"}
+  ]
+}
