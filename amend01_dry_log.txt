@@ -1,0 +1,45 @@
+21:21:19 A logits ready
+21:21:20 A done
+21:21:24 B done
+21:21:24 Holm {'A_lab': {'p': 0.6826842008488754, 'p_holm': 1.0, 'observed': False}, 'A_home': {'p': 0.35421004588954297, 'p_holm': 1.0, 'observed': False}, 'B_lab': {'p': 0.7090629911356081, 'p_holm': 1.0, 'observed': False}, 'B_home': {'p': 0.39674354147649366, 'p_holm': 1.0, 'observed': False}}
+21:21:26 C done
+21:21:26 saved results_amend01_dryrun.json
+{
+  "home_window_flow": {
+    "windows_train": 2612,
+    "windows_inside_a_task": 2607,
+    "windows_after_MB_Rest_and_min3": 2363,
+    "windows_in_two_tasks": 0
+  },
+  "home_strata_rule": "exact tasks",
+  "holm_family": {
+    "A_lab": {
+      "p": 0.6826842008488754,
+      "p_holm": 1.0,
+      "observed": false
+    },
+    "A_home": {
+      "p": 0.35421004588954297,
+      "p_holm": 1.0,
+      "observed": false
+    },
+    "B_lab": {
+      "p": 0.7090629911356081,
+      "p_holm": 1.0,
+      "observed": false
+    },
+    "B_home": {
+      "p": 0.39674354147649366,
+      "p_holm": 1.0,
+      "observed": false
+    }
+  },
+  "A_cells": {
+    "lab": 209,
+    "home": 174
+  },
+  "B_patients": {
+    "lab": 37,
+    "home": 33
+  }
+}

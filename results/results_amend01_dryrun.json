@@ -1,0 +1,440 @@
+{
+  "amendment": "AMENDMENT_01.md",
+  "dry_run": true,
+  "versions": {
+    "python": "3.8.5",
+    "numpy": "1.19.2",
+    "pandas": "1.1.3",
+    "scipy": "1.5.2"
+  },
+  "inputs_sha256": {
+    "tasks.csv": "d5214b0f1bd8ec0ccfcff5c8d59b76ae103aa2af87fe838575565eb2a2161f74",
+    "fog_distance_primary.csv": "0754586aba0d9b3b94fbe1f351daaeedb441a6d68924f5bbbd9849fc12e4170a",
+    "frozen_gate.json": "1d5fe4cb01cbaf0375c99567748efac4375115d34c98bb000577bfbdecc6ea77"
+  },
+  "parameters": {
+    "exclude_prefixes": [
+      "MB",
+      "Rest"
+    ],
+    "min_windows_per_state_in_home_stratum": 2,
+    "min_windows_per_recording": 3,
+    "fallback_min_patients": 20,
+    "fog_distance_s": [
+      30.0,
+      60.0
+    ],
+    "c_gates": {
+      "defog": 15,
+      "tdcsfog": 20
+    },
+    "c2": [
+      15,
+      30.0,
+      60.0,
+      2
+    ],
+    "n_boot": 1000,
+    "seeds": [
+      42,
+      77
+    ],
+    "lr_C": 1.0
+  },
+  "home_window_flow": {
+    "windows_train": 2612,
+    "windows_inside_a_task": 2607,
+    "windows_after_MB_Rest_and_min3": 2363,
+    "windows_in_two_tasks": 0
+  },
+  "home_strata_rule": "exact tasks",
+  "A": {
+    "lab": {
+      "cells": 209,
+      "patient_visits": 98,
+      "matched_difference": {
+        "n_patients": 37,
+        "mean": -0.023454442675828857,
+        "median": 0.003720910146563172,
+        "positive": 20,
+        "zeros": 0,
+        "median_ci95": [
+          -0.027006245969264847,
+          0.019611323343348155
+        ],
+        "share_positive_ci95": [
+          0.4047297297297298,
+          0.7027027027027027
+        ],
+        "dz": -0.22218382353668484,
+        "wilcoxon_p_one_sided": 0.6826842008488754
+      },
+      "pairwise_accuracy": {
+        "n_patients": 37,
+        "mean": 0.4811668811668813,
+        "mean_ci95": [
+          0.3791516516516516,
+          0.5730378592878594
+        ]
+      }
+    },
+    "home": {
+      "cells": 174,
+      "patient_visits": 40,
+      "matched_difference": {
+        "n_patients": 32,
+        "mean": 0.04977370180000753,
+        "median": -0.00567638138078491,
+        "positive": 14,
+        "zeros": 0,
+        "median_ci95": [
+          -0.0497737332548448,
+          0.03904203294037247
+        ],
+        "share_positive_ci95": [
+          0.28125,
+          0.59375
+        ],
+        "dz": 0.2324823839896262,
+        "wilcoxon_p_one_sided": 0.35421004588954297
+      },
+      "pairwise_accuracy": {
+        "n_patients": 32,
+        "mean": 0.4778636294261295,
+        "mean_ci95": [
+          0.38866350446428577,
+          0.5722057911706349
+        ]
+      }
+    },
+    "home_decomposition_unmatched": {
+      "all_recordings": {
+        "n_patients": 49,
+        "mean": 0.04057489429525355,
+        "median": 0.01879949360961694,
+        "positive": 29,
+        "zeros": 0,
+        "median_ci95": [
+          -0.014001996957076095,
+          0.056321697708073604
+        ],
+        "share_positive_ci95": [
+          0.4489795918367347,
+          0.7142857142857143
+        ],
+        "dz": 0.24369125124704114,
+        "nominal_p_one_sided": 0.0811173761213328
+      },
+      "train_recordings": {
+        "n_patients": 33,
+        "mean": 0.01191223294088849,
+        "median": 0.010219922176431799,
+        "positive": 18,
+        "zeros": 0,
+        "median_ci95": [
+          -0.04005819035336569,
+          0.03503312329514626
+        ],
+        "share_positive_ci95": [
+          0.36363636363636365,
+          0.6977272727272721
+        ],
+        "dz": 0.09278344184325887,
+        "nominal_p_one_sided": 0.4046939741681913
+      },
+      "train_without_MiniBest_Rest": {
+        "n_patients": 33,
+        "mean": 0.01065507863434373,
+        "median": -0.003810333896613262,
+        "positive": 16,
+        "zeros": 0,
+        "median_ci95": [
+          -0.05903504006472182,
+          0.01879949360961694
+        ],
+        "share_positive_ci95": [
+          0.30303030303030304,
+          0.6666666666666666
+        ],
+        "dz": 0.08146764889088232,
+        "nominal_p_one_sided": 0.43260558637748575
+      },
+      "test_recordings_MiniBest_not_removable": {
+        "n_patients": 16,
+        "mean": 0.09969163333863151,
+        "median": 0.0494952458131478,
+        "positive": 11,
+        "zeros": 0,
+        "median_ci95": [
+          -0.00286399845032212,
+          0.11525111879572558
+        ],
+        "share_positive_ci95": [
+          0.4375,
+          0.875
+        ],
+        "dz": 0.4549670173783298,
+        "nominal_p_one_sided": 0.028839111328125
+      }
+    },
+    "lab_unmatched": {
+      "n_patients": 37,
+      "mean": -0.018458527019495387,
+      "median": -0.011331407777033176,
+      "positive": 17,
+      "zeros": 0,
+      "median_ci95": [
+        -0.03129658666958937,
+        0.012460551565357997
+      ],
+      "share_positive_ci95": [
+        0.2972972972972973,
+        0.6216216216216216
+      ],
+      "dz": -0.24989261283946404,
+      "nominal_p_one_sided": 0.8527951254466875
+    }
+  },
+  "B": {
+    "lab": {
+      "patients": 37,
+      "patient_visits": 107,
+      "cells": 209,
+      "matched_difference": {
+        "n_patients": 37,
+        "mean": -0.029639133615987735,
+        "median": -0.014365933272966041,
+        "positive": 17,
+        "zeros": 0,
+        "median_ci95": [
+          -0.03741894965759333,
+          0.03445446550978283
+        ],
+        "share_positive_ci95": [
+          0.2972972972972973,
+          0.6216216216216216
+        ],
+        "dz": -0.22895196228657866,
+        "wilcoxon_p_one_sided": 0.7090629911356081
+      },
+      "unmatched_difference": {
+        "n_patients": 37,
+        "mean": -0.021799900870221565,
+        "median": -0.014365933272966034,
+        "positive": 15,
+        "zeros": 0,
+        "median_ci95": [
+          -0.03220872453344402,
+          0.01805169892453807
+        ],
+        "share_positive_ci95": [
+          0.24324324324324326,
+          0.5675675675675675
+        ],
+        "dz": -0.21723357560765247,
+        "nominal_p_one_sided": 0.811259655704317
+      },
+      "pairwise_accuracy": {
+        "n_patients": 37,
+        "mean": 0.4638352638352638,
+        "mean_ci95": [
+          0.3656311668811668,
+          0.5657545045045046
+        ]
+      }
+    },
+    "home": {
+      "patients": 33,
+      "patient_visits": 41,
+      "cells": 174,
+      "matched_difference": {
+        "n_patients": 32,
+        "mean": 0.013002115091825275,
+        "median": 0.005364294577633163,
+        "positive": 18,
+        "zeros": 0,
+        "median_ci95": [
+          -0.05844356010305869,
+          0.05226304394153392
+        ],
+        "share_positive_ci95": [
+          0.375,
+          0.75
+        ],
+        "dz": 0.07474691356722758,
+        "wilcoxon_p_one_sided": 0.39674354147649366
+      },
+      "unmatched_difference": {
+        "n_patients": 33,
+        "mean": -0.03734576704122204,
+        "median": -0.0027198404824837624,
+        "positive": 15,
+        "zeros": 0,
+        "median_ci95": [
+          -0.09588358523729078,
+          0.0396813795898721
+        ],
+        "share_positive_ci95": [
+          0.30303030303030304,
+          0.6363636363636364
+        ],
+        "dz": -0.27024156994010173,
+        "nominal_p_one_sided": 0.8790684795690618
+      },
+      "pairwise_accuracy": {
+        "n_patients": 32,
+        "mean": 0.4745115995115995,
+        "mean_ci95": [
+          0.3632725694444445,
+          0.5795237618284492
+        ]
+      }
+    }
+  },
+  "holm_family": {
+    "A_lab": {
+      "p": 0.6826842008488754,
+      "p_holm": 1.0,
+      "observed": false
+    },
+    "A_home": {
+      "p": 0.35421004588954297,
+      "p_holm": 1.0,
+      "observed": false
+    },
+    "B_lab": {
+      "p": 0.7090629911356081,
+      "p_holm": 1.0,
+      "observed": false
+    },
+    "B_home": {
+      "p": 0.39674354147649366,
+      "p_holm": 1.0,
+      "observed": false
+    }
+  },
+  "C": {
+    "lab": {
+      "far_from_fog": {
+        "far_30s": {
+          "n_patients": 21,
+          "windows": 2221,
+          "feasible": true,
+          "mean": 0.012454217234378747,
+          "median": -0.020874622577656193,
+          "positive": 9,
+          "zeros": 0,
+          "median_ci95": [
+            -0.02528020622172189,
+            0.022226028207227147
+          ],
+          "share_positive_ci95": [
+            0.23809523809523808,
+            0.6666666666666666
+          ],
+          "dz": 0.1347026148193364,
+          "nominal_p_one_sided": 0.6586432456970215
+        },
+        "far_60s": {
+          "n_patients": 20,
+          "windows": 2143,
+          "feasible": true,
+          "mean": 0.0017829500491320914,
+          "median": -0.021784508655474398,
+          "positive": 9,
+          "zeros": 0,
+          "median_ci95": [
+            -0.029106672206430744,
+            0.02233624143923383
+          ],
+          "share_positive_ci95": [
+            0.25,
+            0.6512499999999989
+          ],
+          "dz": 0.033411209697584966,
+          "nominal_p_one_sided": 0.6219167709350586
+        }
+      },
+      "pre_onset_vs_far": {
+        "on": {
+          "n_patients": 1,
+          "feasible": false
+        },
+        "off": {
+          "n_patients": 1,
+          "feasible": false
+        }
+      }
+    },
+    "home": {
+      "far_from_fog": {
+        "far_30s": {
+          "n_patients": 31,
+          "windows": 1551,
+          "feasible": true,
+          "mean": 0.021000753435549975,
+          "median": -0.008392404892463956,
+          "positive": 15,
+          "zeros": 0,
+          "median_ci95": [
+            -0.07635189636289308,
+            0.0217565759520197
+          ],
+          "share_positive_ci95": [
+            0.29032258064516137,
+            0.6451612903225806
+          ],
+          "dz": 0.10646286319250368,
+          "nominal_p_one_sided": 0.6809357521397893
+        },
+        "far_60s": {
+          "n_patients": 27,
+          "windows": 1227,
+          "feasible": true,
+          "mean": 0.00906836854178736,
+          "median": -0.004955735409367029,
+          "positive": 13,
+          "zeros": 0,
+          "median_ci95": [
+            -0.06854757399523424,
+            0.029565265954890257
+          ],
+          "share_positive_ci95": [
+            0.2962962962962963,
+            0.6666666666666666
+          ],
+          "dz": 0.045953437197049724,
+          "nominal_p_one_sided": 0.7717961154014721
+        }
+      },
+      "pre_onset_vs_far": {
+        "on": {
+          "n_patients": 5,
+          "feasible": false
+        },
+        "off": {
+          "n_patients": 4,
+          "feasible": false
+        }
+      }
+    }
+  },
+  "D": {
+    "tdcsfog": {
+      "lopo_auc": 0.4627464138914521,
+      "permutation_null_mean": 0.4729485181179457,
+      "intercept_only_auc_all": 0.2540747604785465,
+      "intercept_only_auc_paired": 0.4526766172178988
+    },
+    "defog": {
+      "lopo_auc": 0.6872294372294372,
+      "permutation_null_mean": 0.47365086580086574,
+      "intercept_only_auc_all": 0.4332251082251082,
+      "intercept_only_auc_paired": 0.5
+    },
+    "pooled": {
+      "lopo_auc": 0.5468804199523623,
+      "intercept_only_auc_all": 0.2777189103739004
+    }
+  }
+}

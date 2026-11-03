@@ -1,0 +1,27 @@
+solution chunk 1
+solution chunk 2
+solution chunk 3
+solution chunk 4
+solution chunk 5
+recording 1 / 1156
+recording 101 / 1156
+recording 201 / 1156
+recording 301 / 1156
+recording 401 / 1156
+recording 501 / 1156
+recording 601 / 1156
+recording 701 / 1156
+recording 801 / 1156
+recording 901 / 1156
+recording 1001 / 1156
+recording 1101 / 1156
+windows 21842 of 21842
+                         count        mean  ...    75%     max
+win_index              21842.0  145.627324  ...  236.0  1379.0
+fog_dist_s             21842.0         inf  ...    inf     inf
+t_to_next_onset_s      21842.0         inf  ...    inf     inf
+t_since_last_offset_s  21842.0         inf  ...    inf     inf
+unscored_dist_s        21842.0         inf  ...    inf     inf
+
+[5 rows x 8 columns]
+sha256 of fog_distance_primary.csv: 0754586aba0d9b3b94fbe1f351daaeedb441a6d68924f5bbbd9849fc12e4170a
