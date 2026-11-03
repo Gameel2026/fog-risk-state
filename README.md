@@ -1,4 +1,5 @@
 # fog-risk-state
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23931405.svg)](https://doi.org/10.5281/zenodo.23931405)
 
 Levodopa OFF-state detection from freeze-free walking in people with freezing of gait, using a single lower-back accelerometer.
 
