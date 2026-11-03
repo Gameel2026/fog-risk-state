@@ -1,0 +1,1363 @@
+{
+  "plan": "PLAN.md version 1",
+  "quick_dry_run": false,
+  "n_perm": 1000,
+  "n_boot": 1000,
+  "frozen_gate_sha256": "1d5fe4cb01cbaf0375c99567748efac4375115d34c98bb000577bfbdecc6ea77",
+  "gate": {
+    "rule": "Otsu on pooled log 0.5-3 Hz power (primary windows, no labels) and step autocorrelation > 0.3",
+    "logP_loc_threshold": 1.6852150201449865,
+    "ac_threshold": 0.3,
+    "windows_total": 21842,
+    "windows_kept": 7720
+  },
+  "cohort": {
+    "tdcsfog": {
+      "recordings_total": 1039,
+      "patients_total": 71,
+      "recordings_kept": 717,
+      "recordings_excluded": 322,
+      "patients_kept": 68,
+      "patients_paired": 37,
+      "windows_kept": 3984,
+      "windows_per_recording_median": 5.0
+    },
+    "defog": {
+      "recordings_total": 137,
+      "patients_total": 57,
+      "recordings_kept": 136,
+      "recordings_excluded": 1,
+      "patients_kept": 57,
+      "patients_paired": 49,
+      "windows_kept": 3371,
+      "windows_per_recording_median": 21.0
+    }
+  },
+  "primary": {
+    "lopo_tdcsfog": {
+      "n_recordings": 717,
+      "n_patients": 68,
+      "auc": 0.4627464138914521,
+      "n_paired_patients": 37,
+      "median_diff_off_minus_on": 0.004628064823330502,
+      "patients_off_gt_on": 20,
+      "concordance_within_patient": 0.5429936305732485,
+      "auc_between_patients": 0.46105588841121015,
+      "wilcoxon_p_one_sided": 0.22307255004470894,
+      "dz": 0.15264215650394672,
+      "auc_ci95": [
+        0.39943001717171533,
+        0.5280619451815218
+      ],
+      "median_diff_ci95": [
+        -0.0064169323465983474,
+        0.015107409160447324
+      ],
+      "concordance_ci95": [
+        0.3783783783783784,
+        0.7027027027027027
+      ]
+    },
+    "lopo_defog": {
+      "n_recordings": 136,
+      "n_patients": 57,
+      "auc": 0.6872294372294372,
+      "n_paired_patients": 49,
+      "median_diff_off_minus_on": 0.05588425640131267,
+      "patients_off_gt_on": 39,
+      "concordance_within_patient": 0.7868852459016393,
+      "auc_between_patients": 0.6855818061382204,
+      "wilcoxon_p_one_sided": 1.9139123886631565e-06,
+      "dz": 0.7967857881765001,
+      "auc_ci95": [
+        0.6041472131196824,
+        0.7702883753501402
+      ],
+      "median_diff_ci95": [
+        0.02622936007735599,
+        0.10991506474478058
+      ],
+      "concordance_ci95": [
+        0.673469387755102,
+        0.8979591836734694
+      ]
+    },
+    "lopo_pooled": {
+      "n_recordings": 853,
+      "n_patients": 125,
+      "auc": 0.5468804199523623,
+      "n_paired_patients": 86,
+      "median_diff_off_minus_on": 0.012592802105434862,
+      "patients_off_gt_on": 57,
+      "concordance_within_patient": 0.6342525399129173,
+      "auc_between_patients": 0.5459770788412862,
+      "wilcoxon_p_one_sided": 1.1000076296185769e-05,
+      "dz": 0.5207845313424802,
+      "auc_ci95": [
+        0.49356207225195314,
+        0.6065535716706479
+      ],
+      "median_diff_ci95": [
+        0.006555699540755306,
+        0.025010668233137467
+      ],
+      "concordance_ci95": [
+        0.5694767441860465,
+        0.7558139534883721
+      ]
+    },
+    "cross_tdcsfog_to_defog": {
+      "n_recordings": 136,
+      "n_patients": 57,
+      "auc": 0.6476190476190476,
+      "n_paired_patients": 49,
+      "median_diff_off_minus_on": 0.008430690493814147,
+      "patients_off_gt_on": 36,
+      "concordance_within_patient": 0.7049180327868853,
+      "auc_between_patients": 0.6465003311989401,
+      "wilcoxon_p_one_sided": 1.503800209605038e-05,
+      "dz": 0.6742840945804802,
+      "auc_ci95": [
+        0.565199364384147,
+        0.7332530884745142
+      ],
+      "median_diff_ci95": [
+        0.0047726445996854605,
+        0.016445228307754856
+      ],
+      "concordance_ci95": [
+        0.6122448979591837,
+        0.8571428571428571
+      ]
+    },
+    "cross_defog_to_tdcsfog": {
+      "n_recordings": 717,
+      "n_patients": 68,
+      "auc": 0.5584766378659508,
+      "n_paired_patients": 37,
+      "median_diff_off_minus_on": 0.027692132372259353,
+      "patients_off_gt_on": 23,
+      "concordance_within_patient": 0.6130573248407644,
+      "auc_between_patients": 0.5570636148408988,
+      "wilcoxon_p_one_sided": 0.013032996726115622,
+      "dz": 0.41069948068825923,
+      "auc_ci95": [
+        0.49658889117440136,
+        0.622510250079141
+      ],
+      "median_diff_ci95": [
+        -0.007067134944840736,
+        0.04331529681466839
+      ],
+      "concordance_ci95": [
+        0.4594594594594595,
+        0.7837837837837838
+      ]
+    }
+  },
+  "hypotheses": {
+    "H1": {
+      "test": "Wilcoxon signed-rank, pooled LOPO, per-patient OFF-ON",
+      "p": 1.1000076296185769e-05,
+      "confirmatory": true,
+      "supported": true
+    },
+    "H2a": {
+      "test": "LOPO AUC > 0.5 in each dataset, within patient-visit label permutation",
+      "per_dataset": {
+        "tdcsfog": {
+          "auc": 0.4627464138914521,
+          "p_perm": 0.6433566433566433,
+          "null_mean_auc": 0.4729485181179457
+        },
+        "defog": {
+          "auc": 0.6872294372294372,
+          "p_perm": 0.000999000999000999,
+          "null_mean_auc": 0.47365086580086574
+        }
+      },
+      "p": 0.6433566433566433,
+      "confirmatory": true,
+      "supported": false
+    },
+    "H2b": {
+      "test": "cross-dataset AUC > 0.5 in each direction, label permutation in the target data",
+      "per_direction": {
+        "cross_tdcsfog_to_defog": {
+          "auc": 0.6476190476190476,
+          "p_perm": 0.000999000999000999
+        },
+        "cross_defog_to_tdcsfog": {
+          "auc": 0.5584766378659508,
+          "p_perm": 0.000999000999000999
+        }
+      },
+      "p": 0.000999000999000999,
+      "confirmatory": false,
+      "supported": false
+    },
+    "H4": {
+      "test": "Spearman, per-patient OFF-ON probability vs UPDRS-III OFF-ON, one-sided",
+      "n_patients": 85,
+      "spearman_rho": 0.2239765759965527,
+      "p_one_sided": 0.019668442825689574,
+      "p": 0.019668442825689574,
+      "confirmatory": false,
+      "supported": false
+    }
+  },
+  "H1_sensitivity_within_dataset_predictions_pooled": {
+    "n": 86,
+    "p_one_sided": 3.5062654335284114e-06,
+    "patients_off_gt_on": 59
+  },
+  "controls": {
+    "operating_point_80spec": {
+      "tdcsfog": {
+        "sensitivity": 0.20610687022900764,
+        "specificity": 0.7758241758241758,
+        "threshold_median": 0.34583183970001524
+      },
+      "defog": {
+        "sensitivity": 0.5142857142857142,
+        "specificity": 0.7727272727272727,
+        "threshold_median": 0.5672912643699509
+      },
+      "pooled": {
+        "sensitivity": 0.28313253012048195,
+        "specificity": 0.7754318618042226,
+        "threshold_median": 0.45979955701915176
+      }
+    },
+    "random_split": {
+      "tdcsfog": {
+        "auc_random_recording_split_mean": 0.5242177669658584,
+        "repeats": 5,
+        "folds": 5
+      },
+      "defog": {
+        "auc_random_recording_split_mean": 0.6303463203463203,
+        "repeats": 5,
+        "folds": 5
+      }
+    },
+    "label_shuffle_within_patient_visit": {
+      "tdcsfog": 0.4929362098194994,
+      "defog": 0.40995670995670996
+    },
+    "permutation_null_mean_auc": {
+      "tdcsfog": 0.4729485181179457,
+      "defog": 0.47365086580086574
+    },
+    "order": {
+      "tdcsfog_test_order": {
+        "n_patient_visit_states": 157,
+        "median_rho": 0.5,
+        "wilcoxon_p_two_sided": 2.6424404893838027e-07
+      },
+      "tdcsfog_within_recording_trend_on": {
+        "n_recordings": 261,
+        "median_rho": 0.2,
+        "wilcoxon_p_two_sided": 2.024474468265338e-06
+      },
+      "tdcsfog_within_recording_trend_off": {
+        "n_recordings": 157,
+        "median_rho": 0.08571428571428573,
+        "wilcoxon_p_two_sided": 0.01967049009378934
+      },
+      "defog_within_recording_trend_on": {
+        "n_recordings": 65,
+        "median_rho": 0.2571428571428571,
+        "wilcoxon_p_two_sided": 0.00012672393962549094
+      },
+      "defog_within_recording_trend_off": {
+        "n_recordings": 67,
+        "median_rho": 0.11904761904761905,
+        "wilcoxon_p_two_sided": 0.06445678065190316
+      }
+    },
+    "baseline_single_feature_logP_loc": {
+      "lopo_tdcsfog": {
+        "n_recordings": 717,
+        "n_patients": 68,
+        "auc": 0.28239241674356175,
+        "n_paired_patients": 37,
+        "median_diff_off_minus_on": 0.0002879453388783537,
+        "patients_off_gt_on": 24,
+        "concordance_within_patient": 0.5971337579617835,
+        "auc_between_patients": 0.2764933633045871,
+        "wilcoxon_p_one_sided": 0.0769841201618095,
+        "dz": 0.27270221198778055
+      },
+      "lopo_defog": {
+        "n_recordings": 136,
+        "n_patients": 57,
+        "auc": 0.30194805194805197,
+        "n_paired_patients": 49,
+        "median_diff_off_minus_on": -0.0006919642627269962,
+        "patients_off_gt_on": 14,
+        "concordance_within_patient": 0.29508196721311475,
+        "auc_between_patients": 0.3027158313093398,
+        "wilcoxon_p_one_sided": 0.9999318499116427,
+        "dz": -0.5073578195518342
+      },
+      "lopo_pooled": {
+        "n_recordings": 853,
+        "n_patients": 125,
+        "auc": 0.31969336077515437,
+        "n_paired_patients": 86,
+        "median_diff_off_minus_on": 0.0002765746612563569,
+        "patients_off_gt_on": 57,
+        "concordance_within_patient": 0.602322206095791,
+        "auc_between_patients": 0.31594520483734884,
+        "wilcoxon_p_one_sided": 0.00034279400128563284,
+        "dz": 0.36104376427713053
+      },
+      "cross_tdcsfog_to_defog": {
+        "n_recordings": 136,
+        "n_patients": 57,
+        "auc": 0.6279220779220779,
+        "n_paired_patients": 49,
+        "median_diff_off_minus_on": 0.0005488486408644078,
+        "patients_off_gt_on": 35,
+        "concordance_within_patient": 0.7049180327868853,
+        "auc_between_patients": 0.6257451976153676,
+        "wilcoxon_p_one_sided": 0.00018815902763696937,
+        "dz": 0.5196200040511807
+      },
+      "cross_defog_to_tdcsfog": {
+        "n_recordings": 717,
+        "n_patients": 68,
+        "auc": 0.4871235634594413,
+        "n_paired_patients": 37,
+        "median_diff_off_minus_on": -0.0006812853198178889,
+        "patients_off_gt_on": 13,
+        "concordance_within_patient": 0.4028662420382166,
+        "auc_between_patients": 0.4886710369996838,
+        "wilcoxon_p_one_sided": 0.9974330192405524,
+        "dz": -0.5115192147068647
+      }
+    },
+    "residual_fog_margin0": {
+      "gate": {
+        "threshold": 1.6852150201449865,
+        "rule": "frozen"
+      },
+      "cohort": {
+        "tdcsfog": {
+          "recordings_total": 1039,
+          "patients_total": 71,
+          "recordings_kept": 801,
+          "recordings_excluded": 238,
+          "patients_kept": 69,
+          "patients_paired": 39,
+          "windows_kept": 4512,
+          "windows_per_recording_median": 5.0
+        },
+        "defog": {
+          "recordings_total": 137,
+          "patients_total": 57,
+          "recordings_kept": 136,
+          "recordings_excluded": 1,
+          "patients_kept": 57,
+          "patients_paired": 49,
+          "windows_kept": 3595,
+          "windows_per_recording_median": 24.0
+        }
+      },
+      "lopo_tdcsfog": {
+        "n_recordings": 801,
+        "n_patients": 69,
+        "auc": 0.46052369639942137,
+        "n_paired_patients": 39,
+        "median_diff_off_minus_on": 0.0037525795439792564,
+        "patients_off_gt_on": 22,
+        "concordance_within_patient": 0.5141700404858299,
+        "auc_between_patients": 0.4590068738267904,
+        "wilcoxon_p_one_sided": 0.2604593483086828,
+        "dz": 0.044607179391154654
+      },
+      "lopo_defog": {
+        "n_recordings": 136,
+        "n_patients": 57,
+        "auc": 0.6818181818181819,
+        "n_paired_patients": 49,
+        "median_diff_off_minus_on": 0.053831157409628516,
+        "patients_off_gt_on": 40,
+        "concordance_within_patient": 0.8032786885245902,
+        "auc_between_patients": 0.6800618238021638,
+        "wilcoxon_p_one_sided": 1.6567786727712155e-06,
+        "dz": 0.7833984567993558
+      },
+      "lopo_pooled": {
+        "n_recordings": 937,
+        "n_patients": 126,
+        "auc": 0.5530973451327434,
+        "n_paired_patients": 88,
+        "median_diff_off_minus_on": 0.016315777435697364,
+        "patients_off_gt_on": 60,
+        "concordance_within_patient": 0.6246882793017456,
+        "auc_between_patients": 0.5522846994298493,
+        "wilcoxon_p_one_sided": 7.394764895076721e-08,
+        "dz": 0.6393305291323472
+      },
+      "cross_tdcsfog_to_defog": {
+        "n_recordings": 136,
+        "n_patients": 57,
+        "auc": 0.612987012987013,
+        "n_paired_patients": 49,
+        "median_diff_off_minus_on": 0.010788366165138619,
+        "patients_off_gt_on": 37,
+        "concordance_within_patient": 0.7540983606557377,
+        "auc_between_patients": 0.6107308456612939,
+        "wilcoxon_p_one_sided": 0.00016160679846634207,
+        "dz": 0.5909705204686947
+      },
+      "cross_defog_to_tdcsfog": {
+        "n_recordings": 801,
+        "n_patients": 69,
+        "auc": 0.5656810309360443,
+        "n_paired_patients": 39,
+        "median_diff_off_minus_on": 0.023304710270933393,
+        "patients_off_gt_on": 28,
+        "concordance_within_patient": 0.6167341430499326,
+        "auc_between_patients": 0.5645653553727937,
+        "wilcoxon_p_one_sided": 0.0017693771627714753,
+        "dz": 0.4997625143723692
+      }
+    },
+    "residual_fog_margin5": {
+      "gate": {
+        "threshold": 1.6852150201449865,
+        "rule": "frozen"
+      },
+      "cohort": {
+        "tdcsfog": {
+          "recordings_total": 1039,
+          "patients_total": 71,
+          "recordings_kept": 625,
+          "recordings_excluded": 414,
+          "patients_kept": 64,
+          "patients_paired": 36,
+          "windows_kept": 3446,
+          "windows_per_recording_median": 5.0
+        },
+        "defog": {
+          "recordings_total": 137,
+          "patients_total": 57,
+          "recordings_kept": 132,
+          "recordings_excluded": 5,
+          "patients_kept": 57,
+          "patients_paired": 46,
+          "windows_kept": 3117,
+          "windows_per_recording_median": 20.0
+        }
+      },
+      "lopo_tdcsfog": {
+        "n_recordings": 625,
+        "n_patients": 64,
+        "auc": 0.45852171761477384,
+        "n_paired_patients": 36,
+        "median_diff_off_minus_on": 0.0015446723041384427,
+        "patients_off_gt_on": 19,
+        "concordance_within_patient": 0.5571142284569138,
+        "auc_between_patients": 0.4566579454695676,
+        "wilcoxon_p_one_sided": 0.16501445536531467,
+        "dz": 0.16281097150935744
+      },
+      "lopo_defog": {
+        "n_recordings": 132,
+        "n_patients": 57,
+        "auc": 0.6864095500459138,
+        "n_paired_patients": 46,
+        "median_diff_off_minus_on": 0.0612825448427701,
+        "patients_off_gt_on": 40,
+        "concordance_within_patient": 0.8421052631578947,
+        "auc_between_patients": 0.6836065573770492,
+        "wilcoxon_p_one_sided": 2.1747863958479798e-07,
+        "dz": 0.933403897609117
+      },
+      "lopo_pooled": {
+        "n_recordings": 757,
+        "n_patients": 121,
+        "auc": 0.540462384775498,
+        "n_paired_patients": 82,
+        "median_diff_off_minus_on": 0.01661105272839483,
+        "patients_off_gt_on": 58,
+        "concordance_within_patient": 0.6205035971223022,
+        "auc_between_patients": 0.5394304408128806,
+        "wilcoxon_p_one_sided": 7.897045199977675e-07,
+        "dz": 0.5631389713677675
+      },
+      "cross_tdcsfog_to_defog": {
+        "n_recordings": 132,
+        "n_patients": 57,
+        "auc": 0.5941230486685033,
+        "n_paired_patients": 46,
+        "median_diff_off_minus_on": 0.010048296900100742,
+        "patients_off_gt_on": 32,
+        "concordance_within_patient": 0.6666666666666666,
+        "auc_between_patients": 0.5927400468384075,
+        "wilcoxon_p_one_sided": 0.00011827970171832719,
+        "dz": 0.5646673630265396
+      },
+      "cross_defog_to_tdcsfog": {
+        "n_recordings": 625,
+        "n_patients": 64,
+        "auc": 0.5469779787210112,
+        "n_paired_patients": 36,
+        "median_diff_off_minus_on": 0.03214411645774401,
+        "patients_off_gt_on": 23,
+        "concordance_within_patient": 0.5971943887775552,
+        "auc_between_patients": 0.5457059579546498,
+        "wilcoxon_p_one_sided": 0.012843822542465562,
+        "dz": 0.36414947175383583
+      }
+    },
+    "fog_free_recordings_only": {
+      "tdcsfog": {
+        "n_recordings": 359,
+        "n_patients": 48,
+        "auc": 0.4786967418546366,
+        "n_paired_patients": 20,
+        "median_diff_off_minus_on": 0.008266949856775119,
+        "patients_off_gt_on": 14,
+        "concordance_within_patient": 0.5598290598290598,
+        "auc_between_patients": 0.47613241705460724,
+        "wilcoxon_p_one_sided": 0.014787673950195312,
+        "dz": 0.5135161858466658
+      },
+      "defog": {
+        "n_recordings": 17,
+        "n_patients": 14,
+        "auc": 0.6000000000000001,
+        "n_paired_patients": 2,
+        "median_diff_off_minus_on": 0.08305681212406052,
+        "patients_off_gt_on": 2,
+        "concordance_within_patient": 1.0,
+        "auc_between_patients": 0.5862068965517241
+      },
+      "pooled": {
+        "n_recordings": 376,
+        "n_patients": 62,
+        "auc": 0.5261746722035118,
+        "n_paired_patients": 22,
+        "median_diff_off_minus_on": 0.016917333417902525,
+        "patients_off_gt_on": 17,
+        "concordance_within_patient": 0.6652542372881356,
+        "auc_between_patients": 0.5234714136689437,
+        "wilcoxon_p_one_sided": 0.0014257431030273438,
+        "dz": 0.6979749408663595
+      }
+    }
+  },
+  "exploratory": {
+    "fs32": {
+      "gate": {
+        "threshold": 0.2948044338813425,
+        "rule": "same Otsu rule recomputed for this rate/window"
+      },
+      "cohort": {
+        "tdcsfog": {
+          "recordings_total": 1039,
+          "patients_total": 71,
+          "recordings_kept": 720,
+          "recordings_excluded": 319,
+          "patients_kept": 68,
+          "patients_paired": 37,
+          "windows_kept": 4010,
+          "windows_per_recording_median": 5.0
+        },
+        "defog": {
+          "recordings_total": 137,
+          "patients_total": 57,
+          "recordings_kept": 135,
+          "recordings_excluded": 2,
+          "patients_kept": 57,
+          "patients_paired": 48,
+          "windows_kept": 3516,
+          "windows_per_recording_median": 21.0
+        }
+      },
+      "lopo_tdcsfog": {
+        "n_recordings": 720,
+        "n_patients": 68,
+        "auc": 0.5019147157190635,
+        "n_paired_patients": 37,
+        "median_diff_off_minus_on": 0.013263645614995203,
+        "patients_off_gt_on": 23,
+        "concordance_within_patient": 0.5859872611464968,
+        "auc_between_patients": 0.5001192565207762,
+        "wilcoxon_p_one_sided": 0.0394118588663689,
+        "dz": 0.30306819070365937
+      },
+      "lopo_defog": {
+        "n_recordings": 135,
+        "n_patients": 57,
+        "auc": 0.6998243302591128,
+        "n_paired_patients": 48,
+        "median_diff_off_minus_on": 0.04639577206720291,
+        "patients_off_gt_on": 38,
+        "concordance_within_patient": 0.75,
+        "auc_between_patients": 0.6989247311827957,
+        "wilcoxon_p_one_sided": 1.9612666887120253e-06,
+        "dz": 0.7676742727941533
+      },
+      "lopo_pooled": {
+        "n_recordings": 855,
+        "n_patients": 125,
+        "auc": 0.5769470801021646,
+        "n_paired_patients": 85,
+        "median_diff_off_minus_on": 0.020615646387424785,
+        "patients_off_gt_on": 63,
+        "concordance_within_patient": 0.6715116279069767,
+        "auc_between_patients": 0.5757973272116094,
+        "wilcoxon_p_one_sided": 1.100928559445736e-07,
+        "dz": 0.610273523630499
+      },
+      "cross_tdcsfog_to_defog": {
+        "n_recordings": 135,
+        "n_patients": 57,
+        "auc": 0.6864295125164691,
+        "n_paired_patients": 48,
+        "median_diff_off_minus_on": 0.018937523405760576,
+        "patients_off_gt_on": 34,
+        "concordance_within_patient": 0.7166666666666667,
+        "auc_between_patients": 0.6863799283154122,
+        "wilcoxon_p_one_sided": 7.08510558568934e-05,
+        "dz": 0.6149053701459228
+      },
+      "cross_defog_to_tdcsfog": {
+        "n_recordings": 720,
+        "n_patients": 68,
+        "auc": 0.5773160535117057,
+        "n_paired_patients": 37,
+        "median_diff_off_minus_on": 0.034251393158816014,
+        "patients_off_gt_on": 25,
+        "concordance_within_patient": 0.6480891719745223,
+        "auc_between_patients": 0.5760175136719082,
+        "wilcoxon_p_one_sided": 0.0015921183977781331,
+        "dz": 0.5313258474576368
+      }
+    },
+    "fs16": {
+      "gate": {
+        "threshold": -1.0998060629724504,
+        "rule": "same Otsu rule recomputed for this rate/window"
+      },
+      "cohort": {
+        "tdcsfog": {
+          "recordings_total": 1039,
+          "patients_total": 71,
+          "recordings_kept": 790,
+          "recordings_excluded": 249,
+          "patients_kept": 69,
+          "patients_paired": 38,
+          "windows_kept": 4694,
+          "windows_per_recording_median": 5.0
+        },
+        "defog": {
+          "recordings_total": 137,
+          "patients_total": 57,
+          "recordings_kept": 135,
+          "recordings_excluded": 2,
+          "patients_kept": 57,
+          "patients_paired": 48,
+          "windows_kept": 4013,
+          "windows_per_recording_median": 24.0
+        }
+      },
+      "lopo_tdcsfog": {
+        "n_recordings": 790,
+        "n_patients": 69,
+        "auc": 0.5104811533784958,
+        "n_paired_patients": 38,
+        "median_diff_off_minus_on": 0.008141603138594425,
+        "patients_off_gt_on": 27,
+        "concordance_within_patient": 0.5767634854771784,
+        "auc_between_patients": 0.5093427857845322,
+        "wilcoxon_p_one_sided": 0.02825710499834644,
+        "dz": 0.29969262051303563
+      },
+      "lopo_defog": {
+        "n_recordings": 135,
+        "n_patients": 57,
+        "auc": 0.7257356170399648,
+        "n_paired_patients": 48,
+        "median_diff_off_minus_on": 0.0709510030215838,
+        "patients_off_gt_on": 40,
+        "concordance_within_patient": 0.8166666666666667,
+        "auc_between_patients": 0.7237903225806451,
+        "wilcoxon_p_one_sided": 7.930781620928696e-07,
+        "dz": 0.8068093398227061
+      },
+      "lopo_pooled": {
+        "n_recordings": 925,
+        "n_patients": 126,
+        "auc": 0.5899551782480928,
+        "n_paired_patients": 86,
+        "median_diff_off_minus_on": 0.0247619865836948,
+        "patients_off_gt_on": 68,
+        "concordance_within_patient": 0.6436781609195402,
+        "auc_between_patients": 0.5895226062629727,
+        "wilcoxon_p_one_sided": 1.3070010362248238e-08,
+        "dz": 0.6761151463778904
+      },
+      "cross_tdcsfog_to_defog": {
+        "n_recordings": 135,
+        "n_patients": 57,
+        "auc": 0.6666666666666666,
+        "n_paired_patients": 48,
+        "median_diff_off_minus_on": 0.014525327211178718,
+        "patients_off_gt_on": 36,
+        "concordance_within_patient": 0.7833333333333333,
+        "auc_between_patients": 0.6648745519713262,
+        "wilcoxon_p_one_sided": 3.762795660668017e-05,
+        "dz": 0.6530715356406287
+      },
+      "cross_defog_to_tdcsfog": {
+        "n_recordings": 790,
+        "n_patients": 69,
+        "auc": 0.574326906374848,
+        "n_paired_patients": 38,
+        "median_diff_off_minus_on": 0.022693922625922652,
+        "patients_off_gt_on": 26,
+        "concordance_within_patient": 0.6168741355463347,
+        "auc_between_patients": 0.5736350193506392,
+        "wilcoxon_p_one_sided": 0.011182579960208845,
+        "dz": 0.4266504366996032
+      }
+    },
+    "win10": {
+      "gate": {
+        "threshold": 2.5429417477902954,
+        "rule": "same Otsu rule recomputed for this rate/window"
+      },
+      "cohort": {
+        "tdcsfog": {
+          "recordings_total": 1039,
+          "patients_total": 71,
+          "recordings_kept": 344,
+          "recordings_excluded": 695,
+          "patients_kept": 55,
+          "patients_paired": 26,
+          "windows_kept": 1441,
+          "windows_per_recording_median": 4.0
+        },
+        "defog": {
+          "recordings_total": 137,
+          "patients_total": 57,
+          "recordings_kept": 119,
+          "recordings_excluded": 18,
+          "patients_kept": 54,
+          "patients_paired": 40,
+          "windows_kept": 1289,
+          "windows_per_recording_median": 9.0
+        }
+      },
+      "lopo_tdcsfog": {
+        "n_recordings": 344,
+        "n_patients": 55,
+        "auc": 0.470404296803149,
+        "n_paired_patients": 26,
+        "median_diff_off_minus_on": -0.009192600128411242,
+        "patients_off_gt_on": 11,
+        "concordance_within_patient": 0.43617021276595747,
+        "auc_between_patients": 0.4707390648567119,
+        "wilcoxon_p_one_sided": 0.7495411131069433,
+        "dz": -0.06480916844635586
+      },
+      "lopo_defog": {
+        "n_recordings": 119,
+        "n_patients": 54,
+        "auc": 0.6669496321448783,
+        "n_paired_patients": 40,
+        "median_diff_off_minus_on": 0.0779478738162932,
+        "patients_off_gt_on": 34,
+        "concordance_within_patient": 0.8367346938775511,
+        "auc_between_patients": 0.6638728323699422,
+        "wilcoxon_p_one_sided": 9.023635021369713e-06,
+        "dz": 0.7535672464355736
+      },
+      "lopo_pooled": {
+        "n_recordings": 463,
+        "n_patients": 109,
+        "auc": 0.5318296713980166,
+        "n_paired_patients": 66,
+        "median_diff_off_minus_on": 0.018217936468629507,
+        "patients_off_gt_on": 48,
+        "concordance_within_patient": 0.5822784810126582,
+        "auc_between_patients": 0.5315329532677096,
+        "wilcoxon_p_one_sided": 0.00012129768749810947,
+        "dz": 0.5167993193728008
+      },
+      "cross_tdcsfog_to_defog": {
+        "n_recordings": 119,
+        "n_patients": 54,
+        "auc": 0.4852857951329938,
+        "n_paired_patients": 40,
+        "median_diff_off_minus_on": 0.003524497391186432,
+        "patients_off_gt_on": 21,
+        "concordance_within_patient": 0.5714285714285714,
+        "auc_between_patients": 0.48323699421965316,
+        "wilcoxon_p_one_sided": 0.18750563533145898,
+        "dz": 0.1775881896667647
+      },
+      "cross_defog_to_tdcsfog": {
+        "n_recordings": 344,
+        "n_patients": 55,
+        "auc": 0.5059412132582864,
+        "n_paired_patients": 26,
+        "median_diff_off_minus_on": 0.007000788216584351,
+        "patients_off_gt_on": 14,
+        "concordance_within_patient": 0.5638297872340425,
+        "auc_between_patients": 0.5049396681749623,
+        "wilcoxon_p_one_sided": 0.21927670764194113,
+        "dz": 0.3543780895331073
+      }
+    },
+    "sampling_rate_auc": {
+      "tdcsfog": {
+        "64": 0.4627464138914521,
+        "32": 0.5019147157190635,
+        "16": 0.5104811533784958
+      },
+      "defog": {
+        "64": 0.6872294372294372,
+        "32": 0.6998243302591128,
+        "16": 0.7257356170399648
+      }
+    },
+    "window_count_auc": {
+      "tdcsfog_k_1": 0.5105024746246121,
+      "tdcsfog_k_2": 0.4912423454408187,
+      "tdcsfog_k_4": 0.47272040936163073,
+      "tdcsfog_k_8": 0.4619495008807986,
+      "tdcsfog_k_all": 0.4627464138914521,
+      "defog_k_1": 0.6686147186147186,
+      "defog_k_2": 0.6352813852813852,
+      "defog_k_4": 0.6779220779220779,
+      "defog_k_8": 0.7015151515151514,
+      "defog_k_all": 0.6872294372294372
+    },
+    "no_amplitude_features": {
+      "lopo_tdcsfog": {
+        "n_recordings": 717,
+        "n_patients": 68,
+        "auc": 0.46565724351983895,
+        "n_paired_patients": 37,
+        "median_diff_off_minus_on": 0.0008284212502913529,
+        "patients_off_gt_on": 22,
+        "concordance_within_patient": 0.5191082802547771,
+        "auc_between_patients": 0.4648079930940761,
+        "wilcoxon_p_one_sided": 0.3900854666497446,
+        "dz": 0.0164885839602772
+      },
+      "lopo_defog": {
+        "n_recordings": 136,
+        "n_patients": 57,
+        "auc": 0.6681818181818182,
+        "n_paired_patients": 49,
+        "median_diff_off_minus_on": 0.025220709767384775,
+        "patients_off_gt_on": 37,
+        "concordance_within_patient": 0.7377049180327869,
+        "auc_between_patients": 0.6665930669021859,
+        "wilcoxon_p_one_sided": 1.8686013577436085e-05,
+        "dz": 0.6685298886637772
+      },
+      "lopo_pooled": {
+        "n_recordings": 853,
+        "n_patients": 125,
+        "auc": 0.563125823832759,
+        "n_paired_patients": 86,
+        "median_diff_off_minus_on": 0.008981811560517368,
+        "patients_off_gt_on": 61,
+        "concordance_within_patient": 0.6066763425253991,
+        "auc_between_patients": 0.5626523389894066,
+        "wilcoxon_p_one_sided": 2.380967994239825e-05,
+        "dz": 0.48777792900213207
+      },
+      "cross_tdcsfog_to_defog": {
+        "n_recordings": 136,
+        "n_patients": 57,
+        "auc": 0.5452380952380953,
+        "n_paired_patients": 49,
+        "median_diff_off_minus_on": 0.0006924610567944911,
+        "patients_off_gt_on": 27,
+        "concordance_within_patient": 0.5081967213114754,
+        "auc_between_patients": 0.5449326562155001,
+        "wilcoxon_p_one_sided": 0.15161182403287476,
+        "dz": 0.2504990869981793
+      },
+      "cross_defog_to_tdcsfog": {
+        "n_recordings": 717,
+        "n_patients": 68,
+        "auc": 0.5537958224981127,
+        "n_paired_patients": 37,
+        "median_diff_off_minus_on": 0.011178883857448918,
+        "patients_off_gt_on": 24,
+        "concordance_within_patient": 0.5955414012738853,
+        "auc_between_patients": 0.5532174938675738,
+        "wilcoxon_p_one_sided": 0.016392376101200524,
+        "dz": 0.37992583823881854
+      }
+    },
+    "mean_logit_aggregation": {
+      "lopo_tdcsfog": {
+        "n_recordings": 717,
+        "n_patients": 68,
+        "auc": 0.4665128764365406,
+        "n_paired_patients": 37,
+        "median_diff_off_minus_on": 0.0056563643341341965,
+        "patients_off_gt_on": 21,
+        "concordance_within_patient": 0.5557324840764332,
+        "auc_between_patients": 0.464833633900565,
+        "wilcoxon_p_one_sided": 0.15070590046072102,
+        "dz": 0.1855484328170632
+      },
+      "lopo_defog": {
+        "n_recordings": 136,
+        "n_patients": 57,
+        "auc": 0.6956709956709957,
+        "n_paired_patients": 49,
+        "median_diff_off_minus_on": 0.05366214594487764,
+        "patients_off_gt_on": 40,
+        "concordance_within_patient": 0.819672131147541,
+        "auc_between_patients": 0.6935305807021418,
+        "wilcoxon_p_one_sided": 4.467381487715134e-06,
+        "dz": 0.7854830554969403
+      },
+      "lopo_pooled": {
+        "n_recordings": 853,
+        "n_patients": 125,
+        "auc": 0.5616573780727516,
+        "n_paired_patients": 86,
+        "median_diff_off_minus_on": 0.020885511248367336,
+        "patients_off_gt_on": 63,
+        "concordance_within_patient": 0.6284470246734397,
+        "auc_between_patients": 0.5608828630355301,
+        "wilcoxon_p_one_sided": 1.0225800606347478e-07,
+        "dz": 0.6328448681701445
+      },
+      "cross_tdcsfog_to_defog": {
+        "n_recordings": 136,
+        "n_patients": 57,
+        "auc": 0.6584415584415585,
+        "n_paired_patients": 49,
+        "median_diff_off_minus_on": 0.01084016770839391,
+        "patients_off_gt_on": 40,
+        "concordance_within_patient": 0.7540983606557377,
+        "auc_between_patients": 0.6568778979907264,
+        "wilcoxon_p_one_sided": 2.6710079832985996e-06,
+        "dz": 0.742138916148058
+      },
+      "cross_defog_to_tdcsfog": {
+        "n_recordings": 717,
+        "n_patients": 68,
+        "auc": 0.5588876772082878,
+        "n_paired_patients": 37,
+        "median_diff_off_minus_on": 0.029382514523906927,
+        "patients_off_gt_on": 25,
+        "concordance_within_patient": 0.6050955414012739,
+        "auc_between_patients": 0.5576619003256382,
+        "wilcoxon_p_one_sided": 0.0060047242666910125,
+        "dz": 0.4406060625362756
+      }
+    },
+    "gradient_boosting": {
+      "lopo_tdcsfog": {
+        "n_recordings": 717,
+        "n_patients": 68,
+        "auc": 0.4528982467913766,
+        "n_paired_patients": 37,
+        "median_diff_off_minus_on": -0.020490431976932233,
+        "patients_off_gt_on": 16,
+        "concordance_within_patient": 0.49363057324840764,
+        "auc_between_patients": 0.452098700011111,
+        "wilcoxon_p_one_sided": 0.509027065393607,
+        "dz": -0.012301356142151332
+      },
+      "lopo_defog": {
+        "n_recordings": 136,
+        "n_patients": 57,
+        "auc": 0.6965367965367965,
+        "n_paired_patients": 49,
+        "median_diff_off_minus_on": 0.0987721650963223,
+        "patients_off_gt_on": 37,
+        "concordance_within_patient": 0.7540983606557377,
+        "auc_between_patients": 0.6955177743431221,
+        "wilcoxon_p_one_sided": 1.318563829974452e-05,
+        "dz": 0.7075875064122962
+      },
+      "lopo_pooled": {
+        "n_recordings": 853,
+        "n_patients": 125,
+        "auc": 0.5586279860324215,
+        "n_paired_patients": 86,
+        "median_diff_off_minus_on": 0.05371360313460631,
+        "patients_off_gt_on": 64,
+        "concordance_within_patient": 0.5761973875181422,
+        "auc_between_patients": 0.5584512983969251,
+        "wilcoxon_p_one_sided": 4.498562685019522e-08,
+        "dz": 0.6680306433274303
+      },
+      "cross_tdcsfog_to_defog": {
+        "n_recordings": 136,
+        "n_patients": 57,
+        "auc": 0.7073593073593073,
+        "n_paired_patients": 49,
+        "median_diff_off_minus_on": 0.05607596622763425,
+        "patients_off_gt_on": 33,
+        "concordance_within_patient": 0.6557377049180327,
+        "auc_between_patients": 0.7087657319496578,
+        "wilcoxon_p_one_sided": 8.66348542124138e-05,
+        "dz": 0.6340855549954592
+      },
+      "cross_defog_to_tdcsfog": {
+        "n_recordings": 717,
+        "n_patients": 68,
+        "auc": 0.5610435366160558,
+        "n_paired_patients": 37,
+        "median_diff_off_minus_on": 0.045928699612093116,
+        "patients_off_gt_on": 26,
+        "concordance_within_patient": 0.6210191082802548,
+        "auc_between_patients": 0.5600037606516184,
+        "wilcoxon_p_one_sided": 0.0003534729129542811,
+        "dz": 0.6027243488876679
+      }
+    },
+    "feature_dz": [
+      {
+        "dataset": "tdcsfog",
+        "feature": "logP_loc",
+        "n": 37,
+        "dz": -0.4885649785325722,
+        "dz_lo": -0.7692076923052484,
+        "dz_hi": -0.23429033923954928,
+        "p": 0.008858412574511943,
+        "q_bh": 0.033219047154419784
+      },
+      {
+        "dataset": "tdcsfog",
+        "feature": "logP_frz",
+        "n": 37,
+        "dz": -0.46455118476164176,
+        "dz_lo": -0.7476824911270039,
+        "dz_hi": -0.18789730140276306,
+        "p": 0.019762265149098495,
+        "q_bh": 0.04940566287274623
+      },
+      {
+        "dataset": "tdcsfog",
+        "feature": "log_ratio",
+        "n": 37,
+        "dz": 0.020212780738236184,
+        "dz_lo": -0.2842651867972721,
+        "dz_hi": 0.37930505539183557,
+        "p": 0.6562869243382967,
+        "q_bh": 0.7031645617910323
+      },
+      {
+        "dataset": "tdcsfog",
+        "feature": "rms_V",
+        "n": 37,
+        "dz": -0.5381322061775422,
+        "dz_lo": -0.8216779433625029,
+        "dz_hi": -0.26909407674844826,
+        "p": 0.005133961518895217,
+        "q_bh": 0.033219047154419784
+      },
+      {
+        "dataset": "tdcsfog",
+        "feature": "rms_ML",
+        "n": 37,
+        "dz": -0.4928434641970921,
+        "dz_lo": -0.9179454108278757,
+        "dz_hi": -0.18543163362013437,
+        "p": 0.0030321944363549728,
+        "q_bh": 0.033219047154419784
+      },
+      {
+        "dataset": "tdcsfog",
+        "feature": "rms_AP",
+        "n": 37,
+        "dz": -0.44760247697203015,
+        "dz_lo": -0.7799599743359564,
+        "dz_hi": -0.15343203532601288,
+        "p": 0.01679448672906051,
+        "q_bh": 0.04940566287274623
+      },
+      {
+        "dataset": "tdcsfog",
+        "feature": "f_step",
+        "n": 37,
+        "dz": 0.25359146758797607,
+        "dz_lo": -0.042064023001148504,
+        "dz_hi": 0.5972549133943308,
+        "p": 0.16287071087412586,
+        "q_bh": 0.305382582888986
+      },
+      {
+        "dataset": "tdcsfog",
+        "feature": "step_peak_rel",
+        "n": 37,
+        "dz": -0.27359210939561107,
+        "dz_lo": -0.6068709831162282,
+        "dz_hi": 0.04618048671098571,
+        "p": 0.11842219301474806,
+        "q_bh": 0.25376184217446013
+      },
+      {
+        "dataset": "tdcsfog",
+        "feature": "HR_V",
+        "n": 37,
+        "dz": -0.12318830624558706,
+        "dz_lo": -0.45750944822572526,
+        "dz_hi": 0.22836281315471543,
+        "p": 0.49244451322854665,
+        "q_bh": 0.6155556415356833
+      },
+      {
+        "dataset": "tdcsfog",
+        "feature": "HR_AP",
+        "n": 37,
+        "dz": -0.2422256207604563,
+        "dz_lo": -0.5007614754245804,
+        "dz_hi": 0.07541101286026118,
+        "p": 0.33807327553879374,
+        "q_bh": 0.5071099133081906
+      },
+      {
+        "dataset": "tdcsfog",
+        "feature": "HR_ML",
+        "n": 37,
+        "dz": 0.18553310950744276,
+        "dz_lo": -0.11647960645421979,
+        "dz_hi": 0.5304114709078371,
+        "p": 0.28073511825954933,
+        "q_bh": 0.4678918637659155
+      },
+      {
+        "dataset": "tdcsfog",
+        "feature": "step_reg",
+        "n": 37,
+        "dz": 0.03517354511631335,
+        "dz_lo": -0.28727655111527883,
+        "dz_hi": 0.36378313220908104,
+        "p": 0.7571170186724527,
+        "q_bh": 0.7571170186724527
+      },
+      {
+        "dataset": "tdcsfog",
+        "feature": "stride_reg",
+        "n": 37,
+        "dz": 0.16215780675126942,
+        "dz_lo": -0.14321976450886886,
+        "dz_hi": 0.4574023132822418,
+        "p": 0.43719197844108526,
+        "q_bh": 0.596170879692389
+      },
+      {
+        "dataset": "tdcsfog",
+        "feature": "symmetry",
+        "n": 37,
+        "dz": 0.08440052285122598,
+        "dz_lo": -0.25036715649123903,
+        "dz_hi": 0.4114832329261182,
+        "p": 0.6132845395000281,
+        "q_bh": 0.7031645617910323
+      },
+      {
+        "dataset": "tdcsfog",
+        "feature": "log_jerk",
+        "n": 37,
+        "dz": -0.5021008373430964,
+        "dz_lo": -0.8071421618209241,
+        "dz_hi": -0.23583707404927315,
+        "p": 0.006769241117075083,
+        "q_bh": 0.033219047154419784
+      },
+      {
+        "dataset": "defog",
+        "feature": "logP_loc",
+        "n": 49,
+        "dz": -0.11581170774427003,
+        "dz_lo": -0.3749706671447185,
+        "dz_hi": 0.18443628415055804,
+        "p": 0.8853142942387254,
+        "q_bh": 0.9801600629440878
+      },
+      {
+        "dataset": "defog",
+        "feature": "logP_frz",
+        "n": 49,
+        "dz": 0.10258298760285373,
+        "dz_lo": -0.18797014777299495,
+        "dz_hi": 0.39102868046718886,
+        "p": 0.5341352620773752,
+        "q_bh": 0.7921323695223759
+      },
+      {
+        "dataset": "defog",
+        "feature": "log_ratio",
+        "n": 49,
+        "dz": 0.2907742301147195,
+        "dz_lo": 0.038658571379490116,
+        "dz_hi": 0.5585214811925104,
+        "p": 0.12432832661958342,
+        "q_bh": 0.2331156124117189
+      },
+      {
+        "dataset": "defog",
+        "feature": "rms_V",
+        "n": 49,
+        "dz": -0.4757001969514105,
+        "dz_lo": -0.6851816238034593,
+        "dz_hi": -0.25005590994062166,
+        "p": 0.0056000976672750365,
+        "q_bh": 0.02800048833637518
+      },
+      {
+        "dataset": "defog",
+        "feature": "rms_ML",
+        "n": 49,
+        "dz": -0.37819067362805586,
+        "dz_lo": -0.6480718101182502,
+        "dz_hi": -0.09258065526213545,
+        "p": 0.0236351019828339,
+        "q_bh": 0.059087754957084744
+      },
+      {
+        "dataset": "defog",
+        "feature": "rms_AP",
+        "n": 49,
+        "dz": -0.5507557047777574,
+        "dz_lo": -0.8382755875354493,
+        "dz_hi": -0.3082986527626587,
+        "p": 0.0014320707318812404,
+        "q_bh": 0.010740530489109303
+      },
+      {
+        "dataset": "defog",
+        "feature": "f_step",
+        "n": 49,
+        "dz": 0.1532475703792828,
+        "dz_lo": -0.12421477524100838,
+        "dz_hi": 0.4538228524938456,
+        "p": 0.18749811179376252,
+        "q_bh": 0.3124968529896042
+      },
+      {
+        "dataset": "defog",
+        "feature": "step_peak_rel",
+        "n": 49,
+        "dz": -0.43374616976283764,
+        "dz_lo": -0.6829051065467575,
+        "dz_hi": -0.20302242270451556,
+        "p": 0.00779317950634905,
+        "q_bh": 0.029224423148808937
+      },
+      {
+        "dataset": "defog",
+        "feature": "HR_V",
+        "n": 49,
+        "dz": -0.018590336777623142,
+        "dz_lo": -0.2797768773722738,
+        "dz_hi": 0.2982322483695758,
+        "p": 0.8931744643753005,
+        "q_bh": 0.9801600629440878
+      },
+      {
+        "dataset": "defog",
+        "feature": "HR_AP",
+        "n": 49,
+        "dz": 0.03530045753135046,
+        "dz_lo": -0.26186254635814893,
+        "dz_hi": 0.33716877305063664,
+        "p": 0.5808970709830756,
+        "q_bh": 0.7921323695223759
+      },
+      {
+        "dataset": "defog",
+        "feature": "HR_ML",
+        "n": 49,
+        "dz": 0.5819409278164516,
+        "dz_lo": 0.32863299868315876,
+        "dz_hi": 0.9099569271922382,
+        "p": 0.00021108466415340483,
+        "q_bh": 0.0031662699623010724
+      },
+      {
+        "dataset": "defog",
+        "feature": "step_reg",
+        "n": 49,
+        "dz": 0.07558543773863721,
+        "dz_lo": -0.23106863856516938,
+        "dz_hi": 0.338187685863109,
+        "p": 0.9801600629440878,
+        "q_bh": 0.9801600629440878
+      },
+      {
+        "dataset": "defog",
+        "feature": "stride_reg",
+        "n": 49,
+        "dz": 0.23220004597920313,
+        "dz_lo": -0.051457011036841596,
+        "dz_hi": 0.5545514094644939,
+        "p": 0.08801533580416682,
+        "q_bh": 0.1886042910089289
+      },
+      {
+        "dataset": "defog",
+        "feature": "symmetry",
+        "n": 49,
+        "dz": -0.17876964213667704,
+        "dz_lo": -0.4198347026186705,
+        "dz_hi": 0.10658891789859583,
+        "p": 0.02019563472380317,
+        "q_bh": 0.059087754957084744
+      },
+      {
+        "dataset": "defog",
+        "feature": "log_jerk",
+        "n": 49,
+        "dz": -0.011693219409557958,
+        "dz_lo": -0.2719151708872802,
+        "dz_hi": 0.26323189391185314,
+        "p": 0.92471253931355,
+        "q_bh": 0.9801600629440878
+      }
+    ],
+    "lr_coefficients_pooled_full_data": {
+      "logP_loc": 0.11238463213120924,
+      "logP_frz": 0.09651557796410846,
+      "log_ratio": 0.01621953761573367,
+      "rms_V": -0.475786034860218,
+      "rms_ML": -0.12694518403363253,
+      "rms_AP": -0.14128232265769544,
+      "f_step": 0.03389489127301081,
+      "step_peak_rel": -0.05177954526267113,
+      "HR_V": -0.01090436586867481,
+      "HR_AP": 0.022289176070115747,
+      "HR_ML": 0.016194589137255126,
+      "step_reg": 0.10758344097296922,
+      "stride_reg": 0.09658045547495793,
+      "symmetry": 0.006551673520945359,
+      "log_jerk": 0.36906208690498604,
+      "intercept": -0.36142062394742913
+    },
+    "temporal_fog_link_defog": {
+      "on": {
+        "n_patients": 52,
+        "spearman_rho": 0.3522927338275112,
+        "p_one_sided_positive": 0.005213187873894357
+      },
+      "off": {
+        "n_patients": 47,
+        "spearman_rho": -0.05140065337061598,
+        "p_one_sided_positive": 0.6342471026986503
+      }
+    }
+  },
+  "runtime_min": 15.8
+}

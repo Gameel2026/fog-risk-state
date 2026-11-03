@@ -31,3 +31,12 @@ These notes do not change the plan. These notes record how points left open in t
 - Gradient boosting (exploratory): scikit-learn HistGradientBoostingClassifier with default settings and the same patient weights.
 - Task-matched slowness comparison: not run, because no task labels are available for most recordings. The single-feature baseline is reported.
 - Seeds: 42 for bootstrap and controls, 1000–1999 for H2a permutations, 49 for H2b permutations.
+
+## Corrections (3 November 2026, after step 3 and before Amendment 01)
+- The statement above that task labels are not available for most recordings was incorrect.
+  In tDCS-FoG the Test field gives the test type for every recording, with 3 the most challenging (official data description).
+  In DeFOG the official tasks file gives task intervals for the 91 training recordings. The planned task-matched comparison is carried out under Amendment 01.
+- The order check named "tdcsfog_test_order" in results.json concerns the test type (difficulty), not the order of recording.
+- The order of OFF and ON recordings in tDCS-FoG is not documented in the data description.
+- The figure code in p3_analysis.py was changed for compatibility with an older matplotlib version, and results are now saved before the figures are drawn. No analysis was changed.
+- Step 3 was run with run_analysis_step3.bat, which activates the Anaconda environment. It runs the same command as run_step3.bat.

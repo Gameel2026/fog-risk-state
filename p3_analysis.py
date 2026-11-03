@@ -510,7 +510,8 @@ def figures(rts, D, wc, rate):
         _, v = patient_diff(rts[ds])
         for _, r in v.iterrows():
             ax[i].plot([0, 1], [r[0], r[1]], color="0.6" if r[1] <= r[0] else "C3", lw=0.8)
-        ax[i].set_xticks([0, 1], ["ON", "OFF"])
+        ax[i].set_xticks([0, 1])
+        ax[i].set_xticklabels(["ON", "OFF"])
         ax[i].set_title({"tdcsfog": "Laboratory (tDCS-FoG)", "defog": "Home (DeFOG)"}[ds], fontsize=9)
         ax[i].set_ylabel("Estimated OFF probability" if i == 0 else "")
     fig.tight_layout()
@@ -525,7 +526,8 @@ def figures(rts, D, wc, rate):
             ax.errorbar(d["dz"], yy, xerr=[d["dz"] - d["dz_lo"], d["dz_hi"] - d["dz"]], fmt="o", ms=3,
                         label={"tdcsfog": "Laboratory", "defog": "Home"}[ds])
         ax.axvline(0, color="k", lw=0.6)
-        ax.set_yticks(np.arange(len(feats)), feats, fontsize=7)
+        ax.set_yticks(np.arange(len(feats)))
+        ax.set_yticklabels(feats, fontsize=7)
         ax.set_xlabel("Within-patient effect size dz (OFF - ON)")
         ax.legend(fontsize=7)
         fig.tight_layout()
@@ -672,7 +674,6 @@ def main():
     res["exploratory"] = ex
     log("exploratory done")
 
-    figures(rts, D, wc, rate)
     res["runtime_min"] = round((time.time() - t0) / 60, 1)
 
     def clean(o):
@@ -691,6 +692,10 @@ def main():
     with open(os.path.join(C.OUT, "results.json"), "w") as fh:
         json.dump(clean(res), fh, indent=2)
     log("saved results.json; runtime", res["runtime_min"], "min")
+    try:
+        figures(rts, D, wc, rate)
+    except Exception as e:  # figures never block the saved numbers
+        log("figure error", repr(e))
     print(json.dumps(clean({"cohort": res["cohort"], "hypotheses": hyp}), indent=2))
 
 

@@ -1,0 +1,100 @@
+20:22:50 primary windows 7355 {'tdcsfog': {'recordings_total': 1039, 'patients_total': 71, 'recordings_kept': 717, 'recordings_excluded': 322, 'patients_kept': 68, 'patients_paired': 37, 'windows_kept': 3984, 'windows_per_recording_median': 5.0}, 'defog': {'recordings_total': 137, 'patients_total': 57, 'recordings_kept': 136, 'recordings_excluded': 1, 'patients_kept': 57, 'patients_paired': 49, 'windows_kept': 3371, 'windows_per_recording_median': 21.0}}
+20:27:29 primary done {'lopo_tdcsfog': 0.463, 'lopo_defog': 0.687, 'lopo_pooled': 0.547, 'cross_tdcsfog_to_defog': 0.648, 'cross_defog_to_tdcsfog': 0.558}
+20:29:36 H2a tdcsfog {'auc': 0.4627464138914521, 'p_perm': 0.6433566433566433, 'null_mean_auc': 0.4729485181179457}
+20:31:13 H2a defog {'auc': 0.6872294372294372, 'p_perm': 0.000999000999000999, 'null_mean_auc': 0.47365086580086574}
+20:31:22 hypotheses {'H1': (1.1000076296185769e-05, True), 'H2a': (0.6433566433566433, False), 'H2b': (0.000999000999000999, False), 'H4': (0.019668442825689574, False)}
+20:31:38 controls done
+solution chunk 1
+solution chunk 2
+solution chunk 3
+solution chunk 4
+solution chunk 5
+20:38:39 exploratory done
+20:38:39 saved results.json; runtime 15.8 min
+C:\Users\engom\anaconda3\lib\site-packages\joblib\externals\loky\backend\context.py:136: UserWarning: Could not find the number of physical cores for the following reason:
+[WinError 2] The system cannot find the file specified
+Returning the number of logical cores instead. You can silence this warning by setting LOKY_MAX_CPU_COUNT to the number of cores you want to use.
+  warnings.warn(
+  File "C:\Users\engom\anaconda3\lib\site-packages\joblib\externals\loky\backend\context.py", line 257, in _count_physical_cores
+    cpu_info = subprocess.run(
+  File "C:\Users\engom\anaconda3\lib\subprocess.py", line 489, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "C:\Users\engom\anaconda3\lib\subprocess.py", line 854, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Users\engom\anaconda3\lib\subprocess.py", line 1307, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+{
+  "cohort": {
+    "tdcsfog": {
+      "recordings_total": 1039,
+      "patients_total": 71,
+      "recordings_kept": 717,
+      "recordings_excluded": 322,
+      "patients_kept": 68,
+      "patients_paired": 37,
+      "windows_kept": 3984,
+      "windows_per_recording_median": 5.0
+    },
+    "defog": {
+      "recordings_total": 137,
+      "patients_total": 57,
+      "recordings_kept": 136,
+      "recordings_excluded": 1,
+      "patients_kept": 57,
+      "patients_paired": 49,
+      "windows_kept": 3371,
+      "windows_per_recording_median": 21.0
+    }
+  },
+  "hypotheses": {
+    "H1": {
+      "test": "Wilcoxon signed-rank, pooled LOPO, per-patient OFF-ON",
+      "p": 1.1000076296185769e-05,
+      "confirmatory": true,
+      "supported": true
+    },
+    "H2a": {
+      "test": "LOPO AUC > 0.5 in each dataset, within patient-visit label permutation",
+      "per_dataset": {
+        "tdcsfog": {
+          "auc": 0.4627464138914521,
+          "p_perm": 0.6433566433566433,
+          "null_mean_auc": 0.4729485181179457
+        },
+        "defog": {
+          "auc": 0.6872294372294372,
+          "p_perm": 0.000999000999000999,
+          "null_mean_auc": 0.47365086580086574
+        }
+      },
+      "p": 0.6433566433566433,
+      "confirmatory": true,
+      "supported": false
+    },
+    "H2b": {
+      "test": "cross-dataset AUC > 0.5 in each direction, label permutation in the target data",
+      "per_direction": {
+        "cross_tdcsfog_to_defog": {
+          "auc": 0.6476190476190476,
+          "p_perm": 0.000999000999000999
+        },
+        "cross_defog_to_tdcsfog": {
+          "auc": 0.5584766378659508,
+          "p_perm": 0.000999000999000999
+        }
+      },
+      "p": 0.000999000999000999,
+      "confirmatory": false,
+      "supported": false
+    },
+    "H4": {
+      "test": "Spearman, per-patient OFF-ON probability vs UPDRS-III OFF-ON, one-sided",
+      "n_patients": 85,
+      "spearman_rho": 0.2239765759965527,
+      "p_one_sided": 0.019668442825689574,
+      "p": 0.019668442825689574,
+      "confirmatory": false,
+      "supported": false
+    }
+  }
+}
