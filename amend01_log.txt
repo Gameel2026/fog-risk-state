@@ -1,0 +1,45 @@
+21:49:42 A logits ready
+21:49:43 A done
+21:49:47 B done
+21:49:47 Holm {'A_lab': {'p': 0.11815242157339606, 'p_holm': 0.11815242157339606, 'observed': False}, 'A_home': {'p': 0.0005333542936616535, 'p_holm': 0.0016000628809849605, 'observed': True}, 'B_lab': {'p': 0.0033846205585375414, 'p_holm': 0.006769241117075083, 'observed': True}, 'B_home': {'p': 8.510814249245575e-06, 'p_holm': 3.40432569969823e-05, 'observed': True}}
+21:49:50 C done
+21:49:50 saved results_amend01.json
+{
+  "home_window_flow": {
+    "windows_train": 2612,
+    "windows_inside_a_task": 2607,
+    "windows_after_MB_Rest_and_min3": 2363,
+    "windows_in_two_tasks": 0
+  },
+  "home_strata_rule": "exact tasks",
+  "holm_family": {
+    "A_lab": {
+      "p": 0.11815242157339606,
+      "p_holm": 0.11815242157339606,
+      "observed": false
+    },
+    "A_home": {
+      "p": 0.0005333542936616535,
+      "p_holm": 0.0016000628809849605,
+      "observed": true
+    },
+    "B_lab": {
+      "p": 0.0033846205585375414,
+      "p_holm": 0.006769241117075083,
+      "observed": true
+    },
+    "B_home": {
+      "p": 8.510814249245575e-06,
+      "p_holm": 3.40432569969823e-05,
+      "observed": true
+    }
+  },
+  "A_cells": {
+    "lab": 209,
+    "home": 174
+  },
+  "B_patients": {
+    "lab": 37,
+    "home": 33
+  }
+}
