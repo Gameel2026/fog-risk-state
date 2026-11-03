@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this software or its results, please cite it as below."
+title: "fog-risk-state: levodopa OFF-state detection from freeze-free walking with a single lower-back accelerometer"
+type: software
+authors:
+  - family-names: "Soliman"
+    given-names: "Ahmed M."
+    affiliation: "Biomedical Engineering Department, Capital University (Formerly Helwan University), Cairo, Egypt"
+  - family-names: "Gamil"
+    given-names: "Doaa Y. Nashaat"
+    affiliation: "Biomedical Engineering Department, Capital University (Formerly Helwan University), Cairo, Egypt"
+  - family-names: "Hammad"
+    given-names: "Muhammed S."
+    affiliation: "Biomedical Engineering Department, Capital University (Formerly Helwan University), Cairo, Egypt"
+  - family-names: "Hassan"
+    given-names: "Mohammed A."
+    affiliation: "Biomedical Engineering Department, Capital University (Formerly Helwan University), Cairo, Egypt"
+license: MIT
+repository-code: "https://github.com/Gameel2026/fog-risk-state"
+keywords:
+  - freezing of gait
+  - Parkinson's disease
+  - levodopa
+  - wearable sensors
+  - embedded systems
+  - pre-registration
