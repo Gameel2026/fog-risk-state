@@ -1,0 +1,237 @@
+{
+  "amendment": "AMENDMENT_02.md",
+  "dry_run": false,
+  "versions": {
+    "python": "3.8.5",
+    "numpy": "1.19.2",
+    "pandas": "1.1.3",
+    "scipy": "1.5.2"
+  },
+  "inputs_sha256": {
+    "windows_notype.pkl": "8d67759598cf70ae7a2945574f413f754d4f366e1ac7a930188d56033e3ef158",
+    "recordings_notype.csv": "ad04e5fcde4586b869f12dd20682120a09814ba86fa4d5d9f47e6db7112d1465",
+    "tasks.csv": "d5214b0f1bd8ec0ccfcff5c8d59b76ae103aa2af87fe838575565eb2a2161f74",
+    "frozen_gate.json": "1d5fe4cb01cbaf0375c99567748efac4375115d34c98bb000577bfbdecc6ea77"
+  },
+  "counts": {
+    "new_recordings_after_gate": 46,
+    "replication_subject_visits": 19,
+    "replication_recordings": 38,
+    "replication_windows_gated": 2074,
+    "replication_windows_after_MiniBest_Rest": 1892,
+    "windows_in_two_tasks": 0,
+    "excluded_recordings": 8
+  },
+  "reproduction_max_abs_diff": 5.551115123125783e-17,
+  "models": {
+    "primary": {
+      "strata_rule": "exact tasks",
+      "cells": 133,
+      "matched_difference": {
+        "n_patients": 19,
+        "mean": 0.24657436338191907,
+        "median": 0.19010144889587008,
+        "positive": 14,
+        "zeros": 0,
+        "median_ci95": [
+          0.01557895017990728,
+          0.3440703858583415
+        ],
+        "share_positive_ci95": [
+          0.5263157894736842,
+          0.8947368421052632
+        ],
+        "dz": 0.6317176309997802,
+        "wilcoxon_p_one_sided": 0.0026645660400390625
+      },
+      "pairwise_accuracy": {
+        "n_patients": 19,
+        "mean": 0.7422989291410343,
+        "mean_ci95": [
+          0.6176153451811347,
+          0.8522915242652084
+        ]
+      },
+      "unmatched_difference_after_MiniBest_Rest_removal": {
+        "n_patients": 19,
+        "mean": 0.276948444065332,
+        "median": 0.13419047509905058,
+        "positive": 17,
+        "zeros": 0,
+        "median_ci95": [
+          0.039446756242158404,
+          0.21551487837297412
+        ],
+        "share_positive_ci95": [
+          0.7368421052631579,
+          1.0
+        ],
+        "dz": 0.40335121642496513,
+        "nominal_p_one_sided": 0.0014190673828125
+      },
+      "test_run": true,
+      "confirmatory": true,
+      "significant": true,
+      "wilcoxon_method": "exact"
+    },
+    "S1_lab_trained": {
+      "strata_rule": "exact tasks",
+      "cells": 133,
+      "matched_difference": {
+        "n_patients": 19,
+        "mean": 0.08906468715308558,
+        "median": 0.06799902929135573,
+        "positive": 17,
+        "zeros": 0,
+        "median_ci95": [
+          0.022983336622312223,
+          0.14778270982340277
+        ],
+        "share_positive_ci95": [
+          0.7368421052631579,
+          1.0
+        ],
+        "dz": 0.8131638517176561,
+        "wilcoxon_p_one_sided": 0.0005855560302734375
+      },
+      "pairwise_accuracy": {
+        "n_patients": 19,
+        "mean": 0.7043669780511886,
+        "mean_ci95": [
+          0.5934924432292853,
+          0.8118683071314651
+        ]
+      },
+      "unmatched_difference_after_MiniBest_Rest_removal": {
+        "n_patients": 19,
+        "mean": 0.11433714827089447,
+        "median": 0.07902831552668732,
+        "positive": 15,
+        "zeros": 0,
+        "median_ci95": [
+          0.03386411262993394,
+          0.1001014149146553
+        ],
+        "share_positive_ci95": [
+          0.5789473684210527,
+          0.9473684210526315
+        ],
+        "dz": 0.559421725279219,
+        "nominal_p_one_sided": 0.001010894775390625
+      },
+      "test_run": true,
+      "confirmatory": true,
+      "significant": true,
+      "wilcoxon_method": "exact"
+    },
+    "S2_personal_baseline": {
+      "strata_rule": "exact tasks",
+      "cells": 133,
+      "matched_difference": {
+        "n_patients": 19,
+        "mean": 0.6932118053510578,
+        "median": 0.42526024868362566,
+        "positive": 16,
+        "zeros": 0,
+        "median_ci95": [
+          0.16357405364595104,
+          0.9016795042025851
+        ],
+        "share_positive_ci95": [
+          0.6842105263157895,
+          1.0
+        ],
+        "dz": 0.7783045615831389,
+        "wilcoxon_p_one_sided": 0.0003948211669921875
+      },
+      "pairwise_accuracy": {
+        "n_patients": 19,
+        "mean": 0.7831662489557226,
+        "mean_ci95": [
+          0.662181970076707,
+          0.8964456596035545
+        ]
+      },
+      "unmatched_difference_after_MiniBest_Rest_removal": {
+        "n_patients": 19,
+        "mean": 0.8000985283796661,
+        "median": 0.45085118440495786,
+        "positive": 17,
+        "zeros": 0,
+        "median_ci95": [
+          0.2717483036043774,
+          0.7664265556404881
+        ],
+        "share_positive_ci95": [
+          0.7368421052631579,
+          1.0
+        ],
+        "dz": 0.58898507348777,
+        "nominal_p_one_sided": 0.00084686279296875
+      },
+      "test_run": true,
+      "confirmatory": true,
+      "significant": true,
+      "wilcoxon_method": "exact"
+    },
+    "deployment_descriptive": {
+      "strata_rule": "exact tasks",
+      "cells": 133,
+      "matched_difference": {
+        "n_patients": 19,
+        "mean": 0.1442279549082148,
+        "median": 0.11509360860341694,
+        "positive": 15,
+        "zeros": 0,
+        "median_ci95": [
+          0.10018253383510176,
+          0.21715423080094703
+        ],
+        "share_positive_ci95": [
+          0.631578947368421,
+          0.9473684210526315
+        ],
+        "dz": 0.7184923405561358,
+        "nominal_p_one_sided": 0.00308990478515625
+      },
+      "pairwise_accuracy": {
+        "n_patients": 19,
+        "mean": 0.7408122579175211,
+        "mean_ci95": [
+          0.5965584415584416,
+          0.8625515493278652
+        ]
+      },
+      "unmatched_difference_after_MiniBest_Rest_removal": {
+        "n_patients": 19,
+        "mean": 0.1520518205967912,
+        "median": 0.09301763437368116,
+        "positive": 14,
+        "zeros": 0,
+        "median_ci95": [
+          0.03305791945841041,
+          0.2185504458431899
+        ],
+        "share_positive_ci95": [
+          0.5263157894736842,
+          0.9473684210526315
+        ],
+        "dz": 0.49352294926124113,
+        "nominal_p_one_sided": 0.0035724639892578125
+      }
+    }
+  },
+  "excluded_on_recordings": {
+    "n": 8,
+    "off_minus_on": [
+      0.0848,
+      0.0832,
+      -0.0039,
+      0.2061,
+      0.1264,
+      0.2103,
+      0.0172,
+      0.1275
+    ]
+  }
+}

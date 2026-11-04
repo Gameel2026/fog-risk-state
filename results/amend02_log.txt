@@ -1,0 +1,47 @@
+{
+  "counts": {
+    "new_recordings_after_gate": 46,
+    "replication_subject_visits": 19,
+    "replication_recordings": 38,
+    "replication_windows_gated": 2074,
+    "replication_windows_after_MiniBest_Rest": 1892,
+    "windows_in_two_tasks": 0,
+    "excluded_recordings": 8
+  },
+  "reproduction": 5.551115123125783e-17,
+  "primary": {
+    "n_patients": 19,
+    "mean": 0.24657436338191907,
+    "median": 0.19010144889587008,
+    "positive": 14,
+    "zeros": 0,
+    "median_ci95": [
+      0.01557895017990728,
+      0.3440703858583415
+    ],
+    "share_positive_ci95": [
+      0.5263157894736842,
+      0.8947368421052632
+    ],
+    "dz": 0.6317176309997802,
+    "wilcoxon_p_one_sided": 0.0026645660400390625
+  },
+  "sequence": {
+    "primary": [
+      true,
+      true
+    ],
+    "S1_lab_trained": [
+      true,
+      true
+    ],
+    "S2_personal_baseline": [
+      true,
+      true
+    ],
+    "deployment_descriptive": [
+      null,
+      null
+    ]
+  }
+}
