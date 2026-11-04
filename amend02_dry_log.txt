@@ -1,0 +1,53 @@
+{
+  "amendment": "AMENDMENT_02.md",
+  "dry_run": true,
+  "versions": {
+    "python": "3.8.5",
+    "numpy": "1.19.2",
+    "pandas": "1.1.3",
+    "scipy": "1.5.2"
+  },
+  "inputs_sha256": {
+    "windows_notype.pkl": "8d67759598cf70ae7a2945574f413f754d4f366e1ac7a930188d56033e3ef158",
+    "recordings_notype.csv": "ad04e5fcde4586b869f12dd20682120a09814ba86fa4d5d9f47e6db7112d1465",
+    "tasks.csv": "d5214b0f1bd8ec0ccfcff5c8d59b76ae103aa2af87fe838575565eb2a2161f74",
+    "frozen_gate.json": "1d5fe4cb01cbaf0375c99567748efac4375115d34c98bb000577bfbdecc6ea77"
+  },
+  "counts": {
+    "new_recordings_after_gate": 46,
+    "replication_subject_visits": 19,
+    "replication_recordings": 38,
+    "replication_windows_gated": 2074,
+    "replication_windows_after_MiniBest_Rest": 1892,
+    "windows_in_two_tasks": 0,
+    "excluded_recordings": 8
+  },
+  "reproduction_max_abs_diff": 5.551115123125783e-17,
+  "dry_run_counts": {
+    "primary": {
+      "patients_with_cells": 19,
+      "cells": 133,
+      "strata_rule": "exact tasks",
+      "all_scores_finite": true
+    },
+    "S1_lab_trained": {
+      "patients_with_cells": 19,
+      "cells": 133,
+      "strata_rule": "exact tasks",
+      "all_scores_finite": true
+    },
+    "S2_personal_baseline": {
+      "patients_with_cells": 19,
+      "cells": 133,
+      "strata_rule": "exact tasks",
+      "all_scores_finite": true
+    },
+    "deployment_descriptive": {
+      "patients_with_cells": 19,
+      "cells": 133,
+      "strata_rule": "exact tasks",
+      "all_scores_finite": true
+    }
+  },
+  "windows_per_stratum_state_median": 4.0
+}
