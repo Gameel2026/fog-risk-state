@@ -1,0 +1,13 @@
+{
+  "frozen_threshold": 1.6852150201449865,
+  "leave_one_patient_out_threshold_min": 1.6220836560383143,
+  "leave_one_patient_out_threshold_max": 1.694286391849027,
+  "windows_total": 21842,
+  "windows_changed_leave_one_patient_out": 7,
+  "source_only_tdcsfog_threshold": 1.4811195143581894,
+  "windows_changed_in_target_when_source_is_tdcsfog": 17,
+  "windows_in_target_when_source_is_tdcsfog": 11238,
+  "source_only_defog_threshold": 1.6046760185503488,
+  "windows_changed_in_target_when_source_is_defog": 5,
+  "windows_in_target_when_source_is_defog": 10604
+}
