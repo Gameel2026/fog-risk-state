@@ -1,0 +1,11 @@
+fog_state.elf  :
+section             size        addr
+.text               7028           0
+.rodata             1444        7028
+.ARM.exidx            24        8472
+.bss                2688   536870912
+.comment              66           0
+.ARM.attributes       73           0
+Total              11323
+
+

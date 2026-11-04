@@ -1,0 +1,1 @@
+wrote results/deploy_model_fs16.json and mcu16/fog_params.h; trained on 8707 windows

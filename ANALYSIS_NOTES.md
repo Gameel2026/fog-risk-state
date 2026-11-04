@@ -46,3 +46,13 @@ These notes do not change the plan. These notes record how points left open in t
 - Leaving out one patient moved the threshold between 1.622 and 1.694 and changed the gate decision for 7 of 21,842 primary windows.
 - A threshold from tDCS-FoG alone changed 17 of 11,238 DeFOG windows. A threshold from DeFOG alone changed 5 of 10,604 tDCS-FoG windows.
 - The frozen gate and all reported results are unchanged.
+
+## Exploratory 16-Hz embedded build (4 November 2026, after Amendment 02)
+- PLAN.md allows variants at lower sampling rates. This build ports the 16-Hz variant to the same Cortex-M4F C code. It is exploratory and does not change the 64-Hz primary configuration.
+- `p4b_deploy_model_fs16.py` refits the pooled deployment model on the 16-Hz windows with the label-free Otsu gate recomputed at 16 Hz (threshold -1.0998). It writes `results/deploy_model_fs16.json` and `mcu16/fog_params.h`.
+- `mcu16/fog_state.c` is the 64-Hz C code with a 96-sample window. `mcu16/run_fog_mcu16.py` runs the compiled binary in the Unicorn emulator on all 16-Hz windows and compares it with the Python reference.
+- Logs: `p4b_log.txt` and `mcu16_log.txt`. Outputs: `mcu16/mcu16_results.txt`, `mcu16/mcu16_agreement.csv` and `mcu16/mcu16_recording_scores.csv`.
+- No medication-state test was added. The 16-Hz state results quoted in the manuscript are the planned exploratory variant already stored in `results/results.json`.
+
+## Supplementary feature figure (4 November 2026)
+- `supplementary/fig_s1_features.png` and `supplementary/feature_table.csv` are drawn by `supplementary/fig_s1_features.py` from `results/dz_features.csv` and the pooled coefficients in `results/results.json`. No new analysis was run.
