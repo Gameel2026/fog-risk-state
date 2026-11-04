@@ -40,3 +40,9 @@ These notes do not change the plan. These notes record how points left open in t
 - The order of OFF and ON recordings in tDCS-FoG is not documented in the data description.
 - The figure code in p3_analysis.py was changed for compatibility with an older matplotlib version, and results are now saved before the figures are drawn. No analysis was changed.
 - Step 3 was run with run_analysis_step3.bat, which activates the Anaconda environment. It runs the same command as run_step3.bat.
+
+## Label-free gate check (4 November 2026, after review comments)
+- `p2b_gate_loo_check.py` recomputes the Otsu threshold without each patient in turn and from each source cohort alone. It reads no medication label and computes no medication-state result.
+- Leaving out one patient moved the threshold between 1.622 and 1.694 and changed the gate decision for 7 of 21,842 primary windows.
+- A threshold from tDCS-FoG alone changed 17 of 11,238 DeFOG windows. A threshold from DeFOG alone changed 5 of 10,604 tDCS-FoG windows.
+- The frozen gate and all reported results are unchanged.
